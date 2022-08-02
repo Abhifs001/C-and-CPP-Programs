@@ -1,1 +1,1 @@
-display(start, p);
+ printf("%d\n", sum);  
