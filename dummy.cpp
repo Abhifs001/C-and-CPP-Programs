@@ -1,81 +1,61 @@
-// Online C++ compiler to run C++ program online
-#include <iostream>
-#include <bitset>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <math.h>
-#include <regex>
-using namespace std;
+#include<iostream>
+#include<string>
+#include<vector>
+#include<set>
+#include<bits/stdc++.h>
+using std::cout;using std::max;
+using std::string;
+using std::vector;
+// class Solution {
+// public:
+//     int maxProduct(vector<string>& words) {
+//         vector<int>Product;
+//         int answer= INT_MIN;
+//         //std::cout<<isStringcommon(words[0], words[2]);
+//         for(int i =0;i<words.size();i++){
+//             string temp=words[i];
+//              for(int j = 0;j<words.size();j++){
+//                 if(isStringcommon(temp, words[j])){
+//                     int len1= temp.length();
+//                     int len2= words[j].length();
+//                    answer= max(answer, (len1*len2));
 
-//  string removeLeadingzeroes(string s ){
-//        const regex pattern("^0+(?!$)");
+//                 }
+//              }
 
-//     // Replaces the matched
-//     // value with given string
-//     s = regex_replace(s , pattern, "");
-//     cout<<s;
-//     return s;
-// }
-// int stringConversion(string s, vector<int>&arr) {
-// 	// Write your code here.
-//     string temp="";
-//     for(int i=0;i<arr.size();i++){
-//         string str = bitset<8>(arr[i]).to_string();
-//           str = removeLeadingzeroes(str);
-//         temp+=str;
+//         }
+//         if(answer==INT_MIN)return 0;
+
+//         return answer;
+        
 //     }
-//     if(temp==s){
-//         return 1;
+
+//     bool isStringcommon(string a, string b){
+//         std::set<char>S;
+//         for(int i=0;i<a.length() ;i++){
+//             S.insert(a[i]);
+//         }
+//         for(int i=0;i<b.size();i++){
+//             if(S.find(b[i])!=S.end()){
+//                 return false;
+//             }
+
+//         }
+//         return true;
 //     }
-//     return 0;
-// }
+// };
 class Solution {
 public:
-    char findKthBit(int n, int k) {
-        if(n==1){
-            return '0';
-        }
-        string ans = "";
-        ans = produceString(n, ans);
-        cout<<ans<<endl;
-        int l=0;
-        while(l!=k)l++;
-        cout<< 
-        // return ans[l];
+    int maxProduct(vector<string>& words) {
         
         
     }
-    
-    string produceString(int n, string ans){
-        
-        if(n==2){ 
-            ans+="011";
-            return ans;
-        }
-      string temp = invert(produceString(n-1, ans));
-        reverse ( temp.begin(), temp.end());
-        return( produceString(n-1, ans) + "1" + temp );
-    }
-        
-    
-    
-    // invert function 
-    string invert(string s){
-        for(int i =0;i<s.length();i++){
-            if(s[i]=='0'){
-                s[i]='1';
-            }else if(s[i]=='1'){
-                s[i]='0';
-            }
-        }
-        return s;
-    }
-  
-    
 };
-int main()
+int main(int argc, char const *argv[])
 {
+    vector<string>test= {"a","aa","aaa","aaaa"};
     Solution a;
-    a.findKthBit(3, 1);
+    int answer = a.maxProduct(test);
+cout<<answer<<std::endl;
+    return 0;
 }

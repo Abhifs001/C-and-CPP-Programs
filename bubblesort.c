@@ -1,33 +1,45 @@
 #include<stdio.h>
 #include<conio.h>
 int main(){
-    int a[10];
     int i,j,t;
-    printf("Enter the elements\n");
+    int a[10];
+    printf("Enter the elements of array\n");
     for ( i = 0; i < 10; i++)
-    {
+    { 
         scanf("%d", &a[i]);
+        /* code */
     }
+     
+     //binarysort
+     for (i = 0; i < 10; i++)
+     {
+         for (j = 0; j < 9-i; j++)
+         {
+                    if (a[j]>a[j+1])
+             {
+                 t=a[j];
+                 a[j]=a[j+1];
+                 a[j+1]=t;
 
-    for ( i = 0; i < 10; i++)
-    {
-        for ( j = 0; j < 9-i; j++)
-        {
-            if (a[j]>a[j+1] )
-            {
-                t=a[j];
-                a[j]=a[j+1];
-                a[j+1]=t;
-            }
-            
-        }
+             }
+             
+             /* code */
+         }
+         
+         /* code */
+     }
+
+ printf("The sorted array is\n");
+     for ( i = 0; i < 10; i++)
+     {
         
-    } printf("Sorted array is\n");
-    for ( i = 0; i < 10; i++)
-    {
-        printf("%d\n",a[i]);
-    }
-    
-    
+         printf("a[%d]=%d\n",i,a[i]);
+         
+         
+     }   
+     //searching the elements through binary search
+
+     
+     
     
 }
